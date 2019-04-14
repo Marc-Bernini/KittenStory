@@ -5,9 +5,9 @@ export class Kitten {
   picture: string;
 
   constructor(name: string, race: string, birthday: string, picture: string) {
-    name = this.name;
-    race = this.race;
-    birthday = this.birthday;
-    picture = this.picture;
+    this.name = name;
+    this.race = race;
+    this.birthday = birthday;
+    this.picture = picture;
   }
 }

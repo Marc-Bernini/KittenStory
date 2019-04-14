@@ -1,45 +1,45 @@
 <a [routerLink]="['/home']">Cliquez ici pour revenir à l'accueil.</a>
 
-<form>
+<section>
   <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+    <label for="text" class="col-sm-2 col-form-label">Name</label>
 
     <div class="col-sm-10">
-      <input type="email" class="form-control" id="name" placeholder="Name">
+      <input type="text" class="form-control" id="name" placeholder="Name" [(ngModel)]="name">
     </div>
   </div>
 
   <div class="form-group row">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Race</label>
+    <label for="text" class="col-sm-2 col-form-label">Race</label>
 
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="race" placeholder="Race">
+      <input type="text" class="form-control" id="race" placeholder="Race" [(ngModel)]="race">
     </div>
   </div>
 
   <div class="form-group row">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Birthday</label>
+    <label for="text" class="col-sm-2 col-form-label">Birthday</label>
 
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="birthday" placeholder="Birthday">
+      <input type="text" class="form-control" id="birthday" placeholder="Birthday" [(ngModel)]="birthday">
     </div>
   </div>
 
   <div class="form-group row">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Image</label>
+    <label for="text" class="col-sm-2 col-form-label">Image</label>
 
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="image" placeholder="Image">
+      <input type="text" class="form-control" id="image" placeholder="Image" [(ngModel)]="picture">
     </div>
   </div>
 
 
   <div class="form-group row">
     <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary">Create</button>
+      <button type="submit" class="btn btn-primary" (click)="addKitten()">Create</button>
     </div>
   </div>
-</form>
+</section>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { KittenTransfertService } from 'src/app/services/kitten-transfert.service';
 import { Kitten } from '../../kitten';
 
+
 @Component({
   selector: 'app-create-kitten',
   templateUrl: './create-kitten.component.html',
@@ -13,15 +14,21 @@ export class CreateKittenComponent implements OnInit {
   race: string;
   birthday: string;
   picture: string;
-  kittenModel = new Kitten(this.name, this.race, this.birthday, this.picture );
+  kitten: object;
 
   constructor(private kittenTransfertService: KittenTransfertService) { }
 
   ngOnInit() {
   }
 
-  addKitten(name, race, birthday, picture) {
-    this.kittenModel.name = name;
+  addKitten() {
+    this.kitten = new Kitten(this.name, this.race, this.birthday, this.picture );
+    this.kittenTransfertService.addKitten(this.kitten);
+    console.log(this.kitten);
+    this.name = '';
+    this.race = '';
+    this.birthday = '';
+    this.picture = '';
 
   }
 

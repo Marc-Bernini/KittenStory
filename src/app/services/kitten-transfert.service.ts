@@ -5,12 +5,13 @@ import { Injectable } from '@angular/core';
 })
 export class KittenTransfertService {
 
-  kittenList: Array<object>;
+  kittenList = [];
 
   constructor() { }
 
-  addKitten(kitten) {
-    this.kittenList.push(kitten);
+  addKitten(chaton) {
+    this.kittenList.push(chaton);
+    console.log(this.kittenList);
   }
 }
 
