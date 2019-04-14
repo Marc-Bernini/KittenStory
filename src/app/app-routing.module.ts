@@ -8,7 +8,10 @@ const routes: Routes = [
     path: 'create', component: CreateKittenComponent
   },
   {
-    path: '', component: RacineComponent
+    path: 'home', component: RacineComponent
+  },
+  {
+    path: '', redirectTo: 'home', pathMatch: 'full'
   }
 ];
 
