@@ -1,11 +1,20 @@
 <a [routerLink]="['/home']">Cliquez ici pour revenir à l'accueil.</a>
 
-<section>
+<form name="kittenForm" #form=ngForm>
   <div class="form-group row">
-    <label for="text" class="col-sm-2 col-form-label">Name</label>
+    <label for="name" class="col-sm-2 col-form-label">Name</label>
 
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="name" placeholder="Name" [(ngModel)]="name">
+      <input
+        required
+        type="text"
+        class="form-control"
+        id="name"
+        placeholder="Name"
+        [(ngModel)]="name"
+        name="kittenName"
+        #kittenName="ngModel">
+      <div class="alert alert-danger" *ngIf="kittenName.touched && !kittenName.valid">Name is required</div>
     </div>
   </div>
 
@@ -13,7 +22,16 @@
     <label for="text" class="col-sm-2 col-form-label">Race</label>
 
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="race" placeholder="Race" [(ngModel)]="race">
+      <input
+        required
+        type="text"
+        class="form-control"
+        id="race"
+        placeholder="Race"
+        [(ngModel)]="race"
+        name="kittenRace"
+        #kittenRace="ngModel">
+      <div class="alert alert-danger" *ngIf="kittenRace.touched && !kittenRace.valid">Race is required</div>
     </div>
   </div>
 
@@ -21,25 +39,41 @@
     <label for="text" class="col-sm-2 col-form-label">Birthday</label>
 
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="birthday" placeholder="Birthday" [(ngModel)]="birthday">
+      <input
+        required
+        type="text"
+        class="form-control"
+        id="birthday"
+        placeholder="Birthday"
+        [(ngModel)]="birthday"
+        name="kittenBirthday"
+        #kittenBirthday="ngModel">
+      <div class="alert alert-danger" *ngIf="kittenBirthday.touched && !kittenBirthday.valid">Birthday is required</div>
     </div>
   </div>
 
   <div class="form-group row">
-    <label for="text" class="col-sm-2 col-form-label">Image</label>
+    <label for="text" class="col-sm-2 col-form-label">Picture</label>
 
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="image" placeholder="Image" [(ngModel)]="picture">
+      <input
+        type="text"
+        class="form-control"
+        id="picture"
+        placeholder="Picture"
+        [(ngModel)]="picture"
+        name="kittenPicture"
+        #kittenPicture="ngModel">
     </div>
   </div>
 
 
   <div class="form-group row">
     <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary" (click)="addKitten()">Create</button>
+      <button type="submit" class="btn btn-primary" (click)="addKitten()" [disabled]=!form.valid>Create</button>
     </div>
   </div>
-</section>
+</form>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 

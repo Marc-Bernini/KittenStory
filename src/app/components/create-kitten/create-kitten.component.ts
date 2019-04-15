@@ -6,7 +6,7 @@ import { Kitten } from '../../kitten';
 @Component({
   selector: 'app-create-kitten',
   templateUrl: './create-kitten.component.html',
-  styleUrls: ['./create-kitten.component.scss']
+  styleUrls: ['./create-kitten.component.scss'],
 })
 export class CreateKittenComponent implements OnInit {
 
@@ -29,7 +29,6 @@ export class CreateKittenComponent implements OnInit {
     this.race = '';
     this.birthday = '';
     this.picture = '';
-
   }
 
 }
