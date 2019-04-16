@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { KittenTransfertService } from 'src/app/services/kitten-transfert.service';
 
 @Component({
   selector: 'app-user-kitten',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserKittenComponent implements OnInit {
 
-  constructor() { }
+  myKitten;
+
+  constructor(private kittenTransfertService: KittenTransfertService) { }
 
   ngOnInit() {
+    this.myKitten = this.kittenTransfertService.kittenAdopted;
   }
 
 }

@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class KittenTransfertService {
 
   kittenList = [];
+  kittenAdopted = [];
 
   constructor() { }
 
@@ -13,5 +14,11 @@ export class KittenTransfertService {
     this.kittenList.push(kitten);
     console.log(this.kittenList);
   }
+
+  getKitten(myKitten) {
+    this.kittenAdopted.push(myKitten);
+    console.log(this.kittenAdopted);
+  }
+
 }
 

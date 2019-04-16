@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { KittenTransfertService } from 'src/app/services/kitten-transfert.service';
+import { Kitten } from '../../kitten';
 
 @Component({
   selector: 'app-list-kitten',
@@ -8,12 +9,19 @@ import { KittenTransfertService } from 'src/app/services/kitten-transfert.servic
 })
 export class ListKittenComponent implements OnInit {
 
-  constructor(private kittenTransfertService: KittenTransfertService) { }
-
   kitten;
+
+  constructor(private kittenTransfertService: KittenTransfertService) { }
 
   ngOnInit() {
     this.kitten = this.kittenTransfertService.kittenList;
+    console.log(this.kitten);
+  }
+
+  adoptKitten($event, i) {
+    $event.preventDefault();
+    this.kittenTransfertService.getKitten(this.kitten[i]);
+    this.kitten.splice(i, 1);
   }
 
 }

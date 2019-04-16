@@ -1,13 +1,13 @@
-<div class="card" style="width: 18rem;" *ngFor="let cat of kitten">
+<div class="card" style="width: 18rem;" *ngFor="let cat of kitten; let i = index">
   <img [src]="cat.picture" class="card-img-top" alt="kitten">
 
   <div class="card-body">
-    <h5 class="card-title">{{ cat.name }}</h5>
+    <h5 class="card-title" [innerHTML]="cat.name"></h5>
 
-    <p class="card-text">{{ cat.race}}</p>
+    <p class="card-text" [innerHTML]='cat.race'></p>
 
-    <p class="card-text">{{ cat.birthday}}</p>
+    <p class="card-text" [innerHTML]='cat.birthday'></p>
 
-    <a href="#" class="btn btn-primary">Adopt me</a>
+    <a href class="btn btn-primary" (click)="adoptKitten($event, i)">Adopt me</a>
   </div>
 </div>
