@@ -1,3 +1,53 @@
-img {
-  height: 10rem;
+@import '../../../styles.scss';
+
+.listKitten {
+  width: 23vw;
 }
+
+h1 {
+  font-family: $police;
+  font-size: 2rem;
+  margin-bottom: 5vh;
+  box-shadow: 1px 1px 4px black;
+}
+
+.card {
+  border: 0px !important;
+  margin-bottom: 10vh;
+
+  &:hover .card-img-overlay {
+    background: rgba(216, 205, 195, 0.692);
+    opacity: 0.9;
+    transition-duration: 500ms;
+  }
+
+  .card-img-overlay {
+    display: flex;
+    border-radius: 30px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 30vh;
+    margin-top: 5vh;
+    opacity: 0;
+    width: 15vw;
+    margin: auto auto;
+
+    h5, p {
+      font-family: $police;
+      font-size: 1.3rem;
+      font-weight: 800;
+    }
+
+    a {
+      font-family: $police;
+    }
+  }
+}
+
+img {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+}
+

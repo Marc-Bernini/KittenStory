@@ -10,7 +10,7 @@ export class KittenTransfertService {
 
   constructor() { }
 
-  addKitten(kitten) {
+  addKittenToList(kitten) {
     this.kittenList.push(kitten);
     console.log(this.kittenList);
   }

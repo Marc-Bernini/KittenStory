@@ -23,7 +23,7 @@ export class CreateKittenComponent implements OnInit {
 
   addKitten() {
     this.kitten = new Kitten(this.name, this.race, this.birthday, this.picture );
-    this.kittenTransfertService.addKitten(this.kitten);
+    this.kittenTransfertService.addKittenToList(this.kitten);
     console.log(this.kitten);
     this.name = '';
     this.race = '';

@@ -1,8 +1,44 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div id="title">
   <h1>
     Welcome to {{ title }}!
   </h1>
+
+  <div>
+    <img src="../assets/icons/github-logo.png"/>
+  </div>
 </div>
 
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href [routerLink]="['/home']">Home</a>
+  <a class="navbar-brand" href [routerLink]="'/create'">Create your Kitten</a>
+</nav>
+
+
 <router-outlet></router-outlet>
+
+<div class="footer">
+    <div>Icons made by
+      <a class="flaticon" href="https://www.flaticon.com/authors/dave-gandy"
+      title="Dave Gandy">Dave Gandy</a>
+      from
+      <a class="flaticon" href="https://www.flaticon.com/"
+      title="Flaticon">www.flaticon.com</a>
+      is licensed by
+      <a class="flaticon" href="http://creativecommons.org/licenses/by/3.0/"
+      title="Creative Commons BY 3.0"
+      target="_blank">
+      CC 3.0 BY</a>
+    </div>
+
+    <div class="socialNetwork">
+      <a class="github" href="https://github.com/Marc-Bernini" target="_blank"><img src="https://image.flaticon.com/icons/svg/25/25657.svg" alt="github"/></a>
+      <a class="linkedin" href="https://www.linkedin.com/in/marc-bernini-90941649/" target="_blank"><img src="https://image.flaticon.com/icons/svg/174/174857.svg" alt="linkedin"/></a>
+    </div>
+
+    <ul>
+      <li>Kitten Story by MB</li>
+      <li><a class="navbar-brand" href [routerLink]="['/home']">Home</a></li>
+      <li><a class="navbar-brand" href [routerLink]="'/create'">Create your Kitten</a></li>
+    </ul>
+</div>

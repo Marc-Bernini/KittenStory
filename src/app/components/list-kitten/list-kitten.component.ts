@@ -10,12 +10,14 @@ import { Kitten } from '../../kitten';
 export class ListKittenComponent implements OnInit {
 
   kitten;
+  createdKitten = false;
 
   constructor(private kittenTransfertService: KittenTransfertService) { }
 
   ngOnInit() {
     this.kitten = this.kittenTransfertService.kittenList;
     console.log(this.kitten);
+    this.kitten.length > 0 ? this.createdKitten = true : this.createdKitten = false;
   }
 
   adoptKitten($event, i) {

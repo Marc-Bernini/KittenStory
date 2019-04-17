@@ -1,15 +1,14 @@
-<p>
-  user-kitten works!
-</p>
+<div class="adoptKitten">
+  <h1>My kitten adopted</h1>
+    <div class="card" style="width: 18rem;" *ngFor="let kitten of myKitten">
+      <img [src]="kitten.picture" class="card-img-top" alt="kitten">
 
-<!-- <div class="card" style="width: 18rem;" *ngFor="let kitten of myKitten">
-  <img [src]="kitten.picture" class="card-img-top" alt="kitten">
+      <div class="card-body">
+        <h5 class="card-title">Name: {{ kitten.name }}</h5>
 
-  <div class="card-body">
-    <h5 class="card-title">{{ kitten.name }}</h5>
+        <p class="card-text">Race: {{ kitten.race}}</p>
 
-    <p class="card-text">{{ kitten.race}}</p>
-
-    <p class="card-text">{{ kitten.birthday}}</p>
-  </div>
-</div> -->
+        <p class="card-text">Age: {{ kitten.birthday}}</p>
+      </div>
+    </div>
+</div>

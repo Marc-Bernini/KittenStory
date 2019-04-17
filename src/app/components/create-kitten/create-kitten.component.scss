@@ -1,4 +1,38 @@
-button {
+@import '../../../styles.scss';
+
+.createKitten {
+  margin: 10vh auto;
+  width: 50vw;
+
+  h1 {
+    font-family: $police;
+    margin-bottom: 5vh;
+    text-align: center;
+  }
+
+  label {
+    font-family: $police;
+  }
+}
+
+.button {
+  text-align: center;
+
+  button {
+    border: none;
+    font-family: $police;
+
+  }
+}
+
+input {
+  font-family: $police;
+}
+
+.formOk {
   background: green;
-  border: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
