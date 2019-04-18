@@ -10,6 +10,8 @@ import { Kitten } from '../../kitten';
 })
 export class CreateKittenComponent implements OnInit {
 
+  /* Variables to define object attributes and the object itself */
+
   name: string;
   race: string;
   birthday: string;
@@ -21,10 +23,12 @@ export class CreateKittenComponent implements OnInit {
   ngOnInit() {
   }
 
+  /* Function to create new object with class Kitten. Function call service's method to push
+  the new object created in the service's array */
   addKitten() {
     this.kitten = new Kitten(this.name, this.race, this.birthday, this.picture );
     this.kittenTransfertService.addKittenToList(this.kitten);
-    console.log(this.kitten);
+    /* reset input's form */
     this.name = '';
     this.race = '';
     this.birthday = '';

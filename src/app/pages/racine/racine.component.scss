@@ -1,6 +1,18 @@
+/* Layout of the page */
+
 section {
   display: flex;
   justify-content: space-around;
   margin-top: 10vh;
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10vh;
+  }
 }
